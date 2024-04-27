@@ -7,7 +7,7 @@
 }
 :root{
     --bg-color:#040458;
-    --ash-one:#b0c4de;
+    --ash-one:#e6e6e6;
     --semi:#2e2e2e;
     --oorange:#ce3203;
     --white-snow:#fffafa;
@@ -72,7 +72,7 @@ ul, li a{
    padding: 10px;
    border-radius: 2rem;
    background: var(--white-snow);
-   box-shadow: 0px 0px 10px rgb(0 0 0 /10%);
+   box-shadow: 0px 0px 10px rgb(0 0 0 /15%);
 }
 .inpt ::placeholder{
    color: var(--ash-one);
@@ -82,6 +82,7 @@ ul, li a{
     height: 4vh;
     outline: none;
     border: none;
+    background: var(--white-snow);
 }
 .search-i{
     font-size: 20px;
@@ -133,7 +134,7 @@ ul, li a{
 }
 /* Showcase css */
 .main{
-    padding: 10px 20px;
+    padding: 0px 20px;
 }
 .inner-cont{
     display: flex;
@@ -145,22 +146,27 @@ ul, li a{
 }
 .cardwrapper{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0px 20px;
 }
 .card{
     display: flex;
     align-items: center;
     padding: 15px 50px;
     gap: 1.8rem;
-    background: var(--white-snow);
+    background: var(--ash-one);
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgb(0 0 0 /10%);
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
 }
 .chart-i{
     font-size: 30px
 }
 .cardtxt p{
-    font-size: 10px;
+    font-size: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .cardtxt h4{
@@ -171,14 +177,412 @@ ul, li a{
     color: var(--white-snow);
 }
 
-
-.card-dp{
-    padding: 80px;
-    background: #b0c4de;
-    box-shadow: 0px 0px 10px rgb(0 0 0 /30%);
+.statistic-board{
+    padding: 16px;
+    width: 100%;
 }
-.boxer{
+.inner-board{
+    padding: 30px;
+    background: var(--ash-one);
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px rgb(0 0 0/20%);
+}
+.boardtxt{
+    padding: 20px 75px;
+    display: flex;
+    justify-content: space-between;
+}
+.droptxt{
+    text-align: center;
+    padding: 3px;
+    background: var(--semi);
+    border-radius: 8px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.boardtxt p{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.droptxt h5{
+    margin-bottom: 10px;
+}
+.droptxt select{
+    background: transparent;
+    color: var(--ash-one);
+    border: none;
+    outline: none;
+}
+.inline-txt p{
+    margin-bottom: 1rem;
+    font-size: 12px;
+    font-weight: 600;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.board{
+    display: flex;
+    gap: 30px;
+    padding: 8px 60px;
+    justify-content: center;
+}
+.st-bar{
+    display: flex;
+    gap: 50px;
+}
+.bar{
+    padding: 2px;
+    height: 16vh;
+    background: var(--semi);
+    border-radius: 10px;
+}
+.bar-two{
+    position: absolute;
+    padding: 2px;
+    background: var(--oorange);
+    height: 13vh;
+    border-radius: 10px;
+    margin-right: -1px;
+}
+.bar:hover{
+    transform: translateY(-5px);
+    transition: all 0.3s ease-out;
+}
+.up{
+    margin-top: 2rem;
+    height: 10vh;
+}
+.upt{
+    background: blue;
+    height: 6vh;
+}
+.upt:hover{
+    height: 3vh;
+}
+.upi{
+    margin-top: -1rem;
+    height: 10vh;
+}
+.upty{
+     background: var(--oorange);
+    height: 5vh;
+}
+.dtxt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--semi);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.number-one{
+    width: 100%;
+    background: var(--ash-one);
     padding: 15px;
-    margin-top: 3rem;
-    background: #2e2e2e;
+    border-radius: 8px;
+}
+.show-chart{
+    padding: 10px 0px;
+    display: flex;
+    gap: 3rem;
+}
+.timetxt{
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.timespent p{
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.timespent .bgtxt{
+    padding: 5px;
+    cursor: pointer;
+    background: var(--oorange);
+    color: var(--white-snow);
+}
+.md-chart{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: var(--oorange);
+}
+.days{
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.number-two{
+    width: 100%;
+    background: var(--ash-one);
+    padding: 15px;
+    border-radius: 8px;
+}
+.twop{
+    display: flex;
+    justify-content: center;
+}
+.dp-deatails{
+    display: flex;
+    font-size: 14px;
+    padding: 5px 10px;
+    gap: 2rem;
+}
+.user{
+    font-size: 30px;
+    background: var(--semi);
+    color: var(--white-snow);
+    padding: 4px;
+    height: 6.4vh;
+    border-radius: 3rem;
+}
+.dptxt{
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.dptxt h5{
+    font-size: 15px;
+}
+.dptxt p{
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--oorange);
+}
+.i-con{
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 0.7rem;
+}
+.i-con p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12px;
+}
+.vid{
+    margin-left: -7px;
+}
+.i-con span{
+    margin-left: 0.4em;
+}
+.lpt{
+    margin-left: 0.4em;
+}
+.play{
+    font-size: 16px;
+    color: var(--bg-color);
+}
+.duratime{
+    font-size: 16px;
+    color: #5555f7;
+}
+.star{
+    font-size: 16px;
+    color: var(--oorange);
+}
+.prghtxt{
+    display: flex;
+    margin-left: 3rem;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: -28px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.card-dp{
+    padding: 0px 15px;
+    width: 30%;
+    height: 84vh;
+    background: var(--ash-one);
+    box-shadow: 0px 0px 10px rgb(0 0 0 /40%);
+    border-radius: 8px;
+}
+.pen-dtl{
+    padding: 17px;
+    text-align: end;
+    font-size: 17px;
+    color: #6b6b6b;
+    cursor: pointer;
+}
+.dollsr{
+    position: relative;
+    left: 13.4rem;
+    top: 1rem;
+    width: 25%;
+    padding: 5px;
+    text-align: center;
+    font-size: 13px;
+    border-radius: 8px;
+    background: var(--bg-color);
+    color: var(--ash-one);
+}
+.dollsr:hover{
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}
+.circle-section{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -2rem;
+}
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 22vh;
+    border-top: 1px solid var(--bg-color);
+    border-right: 2px solid var(--bg-color);
+    border-bottom: 2px solid var(--bg-color);
+    background: #e2e0e0;
+    box-shadow: 0px 0px 10px rgb(0 0 0/10%);
+    border-radius: 5rem;
+}
+.seond-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68%;
+    height: 15vh;
+    background: #dfdddd;
+    box-shadow: 0px 0px 10px rgb(0 0 0/10%);
+    border-radius: 5rem;
+}
+.percent{
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--bg-color);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.mycard{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+.mycard p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    color: #444444;
+}
+.mycard .dash{
+    position: relative;
+    top: -6px;
+    font-size: 23px;
+}
+.thecard{
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    width: 90%;
+    padding: 10px 35px;
+    height: 20vh;
+    background:var(--bg-color);
+    border-radius: 0.8rem;
+}
+.thecard:hover{
+    transform: scale(1.2);
+    transition: all 0.3s ease-out;
+}
+.uptxt{
+    display: flex;
+    justify-content: space-between;
+}
+.nano{
+    width: 20%;
+    padding: 14px;
+    background: #3838c9;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgb(0 0 0/20%);
+}
+.innercard h5{
+    color: var(--ash-one);
+    font-size: 17px;
+    font-style: oblique;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.innercard span{
+    font-size: 23px;
+    color: var(--oorange);
+}
+.cardnumb{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 7px;
+    color: var(--ash-one);
+}
+.cardnumb .dash{
+    font-size: 23px;
+}
+.cardnumb p{
+    position: relative;
+    top: 6px;
+    font-weight: 600;
+    font-size: 13px;
+}
+.lastcardtxt{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 15px;
+    font-size: 12px;
+    color: var(--ash-one);
+}
+.transaction{
+    padding: 4px 23px;
+    display: flex;
+    justify-content: space-between;
+}
+.transaction p{
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.plus-i{
+    color: #040458;
+}
+.transactio-li{
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-around;
+}
+.taxi-i{
+    padding: 2px;
+    font-size: 25px;
+    background: #c9c9c9;
+    color: var(--bg-color);
+    border-radius: 7px;
+    box-shadow: 0px 8px 10px rgb(0 0 0 /20%);
+}
+.taxi-txt h4{
+    font-size: 15px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.taxi-txt p{
+    font-size: 12px;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.minuz{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+.viewmore{
+    color: var(--bg-color);
+    padding: 0px 35.5px;
+    font-weight: 600;
+    text-align: start;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    top: 25px;
+    cursor: pointer;
+}
+.viewmore:hover{
+    font-weight: 700;
 }
